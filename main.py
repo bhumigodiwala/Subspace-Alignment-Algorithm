@@ -93,19 +93,19 @@ if __name__ == "__main__":
 
     for s in seeds:
         print('Random Seed: ', s,'\n')
-        # for i in range(len(index)):
+        for i in range(len(index)):
         # Just to check for source: webcam, target: dslr case do as below
-        for i in range(2):
+        # for i in range(2):
             t0 = time()
             source = (df_iter[i][0]).sample(frac = 0.5, random_state = s)
     #         source = df_iter[i][0]
             print(('Source: {} Target: {}').format(index[i][0],index[i][1]))
-            sub = subspace("caffe",source,df_iter[i][1],13,class_kl= False, plot = True)
+            sub = subspace("caffe",source,df_iter[i][1],13,index[i], class_kl= False, plot = True)
             caffe_accdf.iloc[i,0] = sub.fit_predict(plot = False)
             t1 = time()
             caffe_timedf.iloc[i,0] = t1-t0
             t2 = time()
-            caffe_accdf.iloc[i,1] = knn("caffe",source,df_iter[i][1],seed = s, plot = True)
+            caffe_accdf.iloc[i,1] = knn("caffe",source,df_iter[i][1], index[i], seed = s, plot = True)
             t3 = time()
             caffe_timedf.iloc[i,1] = t3-t2
             

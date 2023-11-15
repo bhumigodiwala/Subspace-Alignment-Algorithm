@@ -1,0 +1,85 @@
+Dataset:  caffe
+Mean Vector for Source data: 
+ 0       0.032651
+1       0.289166
+2       1.253587
+3       0.130225
+4       0.706822
+          ...   
+4091    0.412737
+4092    0.004712
+4093    0.925996
+4094    0.863924
+4095    0.591938
+Length: 4096, dtype: float64 
+
+Mean Vector for Source data: 
+ 0       0.062338
+1       0.297117
+2       1.069747
+3       0.142755
+4       0.026192
+          ...   
+4091    0.275632
+4092    0.000000
+4093    1.523010
+4094    1.320798
+4095    0.736090
+Length: 4096, dtype: float64 
+
+Mean Vector for Source data: 
+ 0       0.085455
+1       0.365693
+2       0.530759
+3       0.262210
+4       0.980929
+          ...   
+4091    0.310032
+4092    0.001618
+4093    1.239317
+4094    0.739595
+4095    1.099335
+Length: 4096, dtype: float64 
+
+Random Seed:  20 
+
+Source: webcam Target: dslr
+KL Divergence b/w orig S and T data = 1017.9313685854466 
+
+KL Divergence b/w Original Source and target data (SA) after PCA = 1.8811548533147944 
+
+KL Divergence b/w Source Aligned data (SA) and target data after PCA = 1.5001612541635765 
+
+/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+  ax.scatter(
+/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+  ax.scatter(
+/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+  ax.scatter(
+/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+  ax.scatter(
+Source: dslr Target: webcam
+KL Divergence b/w orig S and T data = 1972.2613269136448 
+
+KL Divergence b/w Original Source and target data (SA) after PCA = 2.80700464379322 
+
+KL Divergence b/w Source Aligned data (SA) and target data after PCA = 1.3265741348890767 
+
+/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+  ax.scatter(
+/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+  ax.scatter(
+/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+  ax.scatter(
+/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+  ax.scatter(
+                                                         subspace                                   without subspace
+(webcam, dslr)  [0.36942675159235666, 0.0, 0.36942675159235666...  [0.20382165605095542, 0.0, 0.20382165605095542...
+(dslr, webcam)  [0.29123173277661796, 0.0, 0.29123173277661796...  [0.20041753653444677, 0.0, 0.20041753653444677...
+Accuracy for (webcam,dslr) 
+ with SA = [0.36942675159235666, 0.0, 0.36942675159235666, 0.36942675159235666] 
+ w/o SA = [0.20382165605095542, 0.0, 0.20382165605095542, 0.20382165605095542] 
+
+Accuracy for (dslr,webcam) 
+ with SA = [0.29123173277661796, 0.0, 0.29123173277661796, 0.29123173277661796] 
+ w/o SA = [0.20041753653444677, 0.0, 0.20041753653444677, 0.20041753653444677] 
