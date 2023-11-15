@@ -16,6 +16,7 @@ def scatter_plot(df_source, x, y):
             row_ix = np.where(y == class_value)
             # create scatter of these samples
             plt.scatter(x[row_ix, 0], x[row_ix, 1])
+            plt.legend([l for l in range(1,11)])
         
 class subspace:
     def __init__(self,dataset,S,T,d,class_kl, plot = False):
@@ -89,24 +90,20 @@ class subspace:
             
         if self.plot == True:
             # create scatter plot for Source dataset after PCA before SA
-            labels = [i for i in range(1, 11)]
             scatter_plot(self.S, sa_pca, y_S)
             plt.title('Source dataset after PCA before SA')
-            plt.legend(labels)
             plt.savefig('output_plots/sa/S_data_(PCA + SA).png')
             plt.close()
 
             # create scatter plot for Target dataset after PCA
             scatter_plot(self.S, st, y_T)
             plt.title('Target dataset after PCA')
-            plt.legend(labels)
             plt.savefig('output_plots/sa/T_data_(PCA).png')
             plt.close()
 
             # create scatter plot for Subspace aligned dataset
             scatter_plot(self.S, sa, y_S)
             plt.title('Subspace Aligned Data')
-            plt.legend(labels)
             plt.savefig('output_plots/sa/SA_aligned_data.png')
             plt.close()
         
@@ -171,17 +168,15 @@ def knn(dataset,S,T,seed, plot = False):
         # print('pca_x_s',x_S_pca.shape)
 
         # create scatter plot for Source dataset after PCA supervised learning case
-        labels = [i for i in range(1, 11)]
+        
         scatter_plot(S, x_S_pca, y_S)
         plt.title('Source dataset after PCA in SL')
-        plt.legend(labels)
         plt.savefig('output_plots/w_o_sa/S_data_(PCA+Classifier).png')
         plt.close()
 
         # create scatter plot for Target dataset after PCA
         scatter_plot(T, x_T_pca, y_T)
         plt.title('Target dataset after PCA in SL')
-        plt.legend(labels)
         plt.savefig('output_plots/w_o_sa/T_data_(PCA+Classifier).png')
         plt.close()
     
