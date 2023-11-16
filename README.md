@@ -12,3 +12,8 @@ The key observations suggest:
 3. Applying Subspace Alignment and PCA drastically reduces the KL divergence values between the source and the target datasets.
 4. There is reduction in KL divergence for data specific to every class
 
+To run and observe the results:
+
+```
+python3 evaluation.py
+```
