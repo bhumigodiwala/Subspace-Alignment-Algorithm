@@ -44,11 +44,11 @@ class subspace:
                 S_row_ix = np.where(y_S == class_value)
                 T_row_ix = np.where(y_T == class_value)                
                 class_kl = KLdivergence(x_S[S_row_ix], x_T[T_row_ix])
-                print(('KL divergence for Class {} = {} \n').format(class_value, class_kl), self.file)
+                print(('KL divergence for Class {} = {} \n').format(class_value, class_kl), file = self.file)
         
     def fit_predict(self,plot):
 #       KL Divergence b/w orig S and T data
-        print(('KL Divergence b/w orig S and T data = {} \n').format(KLdivergence(self.S, self.T)), self.file)
+        print(('KL Divergence b/w orig S and T data = {} \n').format(KLdivergence(self.S, self.T)), file = self.file)
         
         #normalising the data
         scale = StandardScaler()
@@ -78,17 +78,17 @@ class subspace:
         test_s = np.dot(x_S,xs)
 
         if self.class_kl == True:
-            print('Class wise KL Divergence b/w orig S & T data before SA: \n', self.file)
+            print('Class wise KL Divergence b/w orig S & T data before SA: \n', file = self.file)
             self.class_wise_kl(self.S, x_S, x_T, y_S, y_T)
 
-            print('Class wise KL Divergence b/w orig S & T data after SA & PCA: \n', self.file)
+            print('Class wise KL Divergence b/w orig S & T data after SA & PCA: \n', file = self.file)
             self.class_wise_kl(self.S, sa, st, y_S, y_T)
         else:
             # KL Divergence b/w Original Source and Target data SA after PCA
-            print(('KL Divergence b/w Original Source and target data (SA) after PCA = {} \n').format(KLdivergence(test_s, st)), self.file)
+            print(('KL Divergence b/w Original Source and target data (SA) after PCA = {} \n').format(KLdivergence(test_s, st)), file = self.file)
             
             # KL Divergence b/w Source Aligned data and target data SA after PCA
-            print(('KL Divergence b/w Source Aligned data (SA) and target data after PCA = {} \n').format(KLdivergence(sa, st)), self.file)
+            print(('KL Divergence b/w Source Aligned data (SA) and target data after PCA = {} \n').format(KLdivergence(sa, st)), file = self.file)
             
         if self.plot == True:
             # create scatter plot for Source dataset after PCA before SA
@@ -211,7 +211,7 @@ def knn(dataset,S,T,index,seed,file, plot = False):
         # plt.show()
     
     else:
-        print('Note: We do not apply PCA in classification w/o SA \n', file)
+        print('Note: We do not apply PCA in classification w/o SA \n', file = file)
         knn = KNeighborsClassifier(4)
         accuracy = []
         for j in range(5):

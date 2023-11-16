@@ -1,0 +1,379 @@
+Dataset:  googlenet
+Number of Features:  1024
+Fraction of source data sampled randomly: 0.5; Plot Flag = False; Classwise KL flag: True
+PCA: 13
+Mean Vector for Source data: 
+ 0       1.722767
+1       0.303693
+2       1.216561
+3       1.207542
+4       0.357765
+          ...   
+1019    0.341776
+1020    0.287874
+1021    0.670649
+1022    0.890348
+1023    0.498369
+Length: 1024, dtype: float64 
+
+Mean Vector for Source data: 
+ 0       1.033834
+1       0.458488
+2       1.603087
+3       1.361363
+4       0.350813
+          ...   
+1019    0.274727
+1020    0.485597
+1021    0.434603
+1022    0.619723
+1023    0.301073
+Length: 1024, dtype: float64 
+
+Mean Vector for Source data: 
+ 0       1.897015
+1       0.173778
+2       1.668515
+3       1.640483
+4       0.132348
+          ...   
+1019    0.601253
+1020    0.021212
+1021    0.350310
+1022    0.494685
+1023    0.360976
+Length: 1024, dtype: float64 
+
+Random Seed:  20 
+
+Source: webcam Target: dslr
+KL Divergence b/w orig S and T data = 122.58813364194927 
+
+Class wise KL Divergence b/w orig S & T data before SA: 
+
+KL divergence for Class 7 = 59.02170476224916 
+
+KL divergence for Class 4 = 125.45800155677554 
+
+KL divergence for Class 10 = -99.59531038841114 
+
+KL divergence for Class 1 = 247.12128789355455 
+
+KL divergence for Class 6 = -120.21806555190433 
+
+KL divergence for Class 9 = 138.52688573528295 
+
+KL divergence for Class 3 = 270.6251550188551 
+
+KL divergence for Class 5 = 477.9690294100334 
+
+KL divergence for Class 8 = 136.6998194631274 
+
+KL divergence for Class 2 = -106.77774622500272 
+
+Class wise KL Divergence b/w orig S & T data after SA & PCA: 
+
+KL divergence for Class 7 = 6.9571832403948815 
+
+KL divergence for Class 4 = 7.987978337777879 
+
+KL divergence for Class 10 = 5.971714120932998 
+
+KL divergence for Class 1 = 12.786709083483785 
+
+KL divergence for Class 6 = 4.571011772658857 
+
+KL divergence for Class 9 = 7.525835264726795 
+
+KL divergence for Class 3 = 6.348960918006012 
+
+KL divergence for Class 5 = 13.268066210442026 
+
+KL divergence for Class 8 = 9.200331067978608 
+
+KL divergence for Class 2 = 4.214720559426706 
+
+Note: We do not apply PCA in classification w/o SA 
+
+Source: dslr Target: webcam
+KL Divergence b/w orig S and T data = 410.8990507558447 
+
+Class wise KL Divergence b/w orig S & T data before SA: 
+
+KL divergence for Class 7 = 372.3545025907468 
+
+KL divergence for Class 4 = 258.0028610247093 
+
+KL divergence for Class 10 = 166.88985950932772 
+
+KL divergence for Class 1 = 328.42597134166726 
+
+KL divergence for Class 6 = 49.212785493389916 
+
+KL divergence for Class 9 = 312.6131300599549 
+
+KL divergence for Class 3 = 402.2741857885635 
+
+KL divergence for Class 5 = 482.3354928949676 
+
+KL divergence for Class 8 = 187.93114861909604 
+
+KL divergence for Class 2 = 86.60801310303326 
+
+Class wise KL Divergence b/w orig S & T data after SA & PCA: 
+
+KL divergence for Class 7 = 14.308786464192313 
+
+KL divergence for Class 4 = 7.897167778137429 
+
+KL divergence for Class 10 = 11.025634376854129 
+
+KL divergence for Class 1 = 12.020563337470232 
+
+KL divergence for Class 6 = 10.136814199965146 
+
+KL divergence for Class 9 = 6.725078199193069 
+
+KL divergence for Class 3 = 10.325310333221625 
+
+KL divergence for Class 5 = 15.224916215125075 
+
+KL divergence for Class 8 = 7.67454827713262 
+
+KL divergence for Class 2 = 4.031579051944814 
+
+Note: We do not apply PCA in classification w/o SA 
+
+                                                         subspace                                   without subspace
+(webcam, dslr)  [0.9808917197452229, 0.0, 0.9808917197452229, ...  [0.9490445859872612, 0.0, 0.9490445859872612, ...
+(dslr, webcam)  [0.9144050104384134, 0.0, 0.9144050104384134, ...  [0.8340292275574113, 0.0, 0.8340292275574113, ...
+Accuracy for (webcam,dslr) 
+ with SA = [0.9808917197452229, 0.0, 0.9808917197452229, 0.9808917197452229] 
+ w/o SA = [0.9490445859872612, 0.0, 0.9490445859872612, 0.9490445859872612] 
+
+Accuracy for (dslr,webcam) 
+ with SA = [0.9144050104384134, 0.0, 0.9144050104384134, 0.9144050104384134] 
+ w/o SA = [0.8340292275574113, 0.0, 0.8340292275574113, 0.8340292275574113] 
+
+Random Seed:  40 
+
+Source: webcam Target: dslr
+KL Divergence b/w orig S and T data = 94.37659502347903 
+
+Class wise KL Divergence b/w orig S & T data before SA: 
+
+KL divergence for Class 6 = 7.861814637754747 
+
+KL divergence for Class 1 = 134.2812814775609 
+
+KL divergence for Class 8 = 30.885389369364965 
+
+KL divergence for Class 2 = -42.72679727251342 
+
+KL divergence for Class 9 = 353.36225504072405 
+
+KL divergence for Class 4 = -13.954306508110506 
+
+KL divergence for Class 10 = -157.6760429833963 
+
+KL divergence for Class 5 = 168.93385979126492 
+
+KL divergence for Class 3 = 150.25559634042207 
+
+KL divergence for Class 7 = 150.00023706312197 
+
+Class wise KL Divergence b/w orig S & T data after SA & PCA: 
+
+KL divergence for Class 6 = 4.810027217195736 
+
+KL divergence for Class 1 = 9.537476853416766 
+
+KL divergence for Class 8 = 8.797383975726374 
+
+KL divergence for Class 2 = 3.3257499474032333 
+
+KL divergence for Class 9 = 10.48679716330967 
+
+KL divergence for Class 4 = 6.531048068192085 
+
+KL divergence for Class 10 = 1.7464643115014438 
+
+KL divergence for Class 5 = 7.438247117465747 
+
+KL divergence for Class 3 = 4.976771256394597 
+
+KL divergence for Class 7 = 6.468299170615485 
+
+Note: We do not apply PCA in classification w/o SA 
+
+Source: dslr Target: webcam
+KL Divergence b/w orig S and T data = 372.8118371546147 
+
+Class wise KL Divergence b/w orig S & T data before SA: 
+
+KL divergence for Class 6 = 189.59214538255242 
+
+KL divergence for Class 1 = 224.66218202506843 
+
+KL divergence for Class 8 = 147.42552184014625 
+
+KL divergence for Class 2 = 213.18880882417665 
+
+KL divergence for Class 9 = 417.86056158452993 
+
+KL divergence for Class 4 = 129.44213808968425 
+
+KL divergence for Class 10 = 75.41138322834253 
+
+KL divergence for Class 5 = 163.65046731437798 
+
+KL divergence for Class 3 = 333.4335786465033 
+
+KL divergence for Class 7 = 392.99096214603895 
+
+Class wise KL Divergence b/w orig S & T data after SA & PCA: 
+
+KL divergence for Class 6 = 9.773469924808218 
+
+KL divergence for Class 1 = 9.478252803085999 
+
+KL divergence for Class 8 = 6.776514442856417 
+
+KL divergence for Class 2 = 5.911835878047832 
+
+KL divergence for Class 9 = 11.51965150673702 
+
+KL divergence for Class 4 = 7.761554520705637 
+
+KL divergence for Class 10 = 5.971459118366816 
+
+KL divergence for Class 5 = 9.062225618429274 
+
+KL divergence for Class 3 = 10.909718444740948 
+
+KL divergence for Class 7 = 13.134745237417853 
+
+Note: We do not apply PCA in classification w/o SA 
+
+                                                         subspace                                   without subspace
+(webcam, dslr)  [0.9936305732484076, 0.0, 0.9936305732484076, ...                               [1.0, 0.0, 1.0, 1.0]
+(dslr, webcam)  [0.9363256784968683, 1.1102230246251565e-16, 0...  [0.8507306889352819, 1.1102230246251565e-16, 0...
+Accuracy for (webcam,dslr) 
+ with SA = [0.9936305732484076, 0.0, 0.9936305732484076, 0.9936305732484076] 
+ w/o SA = [1.0, 0.0, 1.0, 1.0] 
+
+Accuracy for (dslr,webcam) 
+ with SA = [0.9363256784968683, 1.1102230246251565e-16, 0.9363256784968684, 0.9363256784968684] 
+ w/o SA = [0.8507306889352819, 1.1102230246251565e-16, 0.8507306889352818, 0.8507306889352818] 
+
+Random Seed:  42 
+
+Source: webcam Target: dslr
+KL Divergence b/w orig S and T data = 112.92805980265497 
+
+Class wise KL Divergence b/w orig S & T data before SA: 
+
+KL divergence for Class 10 = -139.81679162462117 
+
+KL divergence for Class 6 = -4.728659848958076 
+
+KL divergence for Class 4 = 141.3524972410292 
+
+KL divergence for Class 9 = 82.06690142229368 
+
+KL divergence for Class 1 = 61.959151248137076 
+
+KL divergence for Class 2 = -117.54988419783177 
+
+KL divergence for Class 8 = 111.16237925392902 
+
+KL divergence for Class 3 = 267.2258669892017 
+
+KL divergence for Class 5 = 260.6898186588187 
+
+KL divergence for Class 7 = 125.84427310349797 
+
+Class wise KL Divergence b/w orig S & T data after SA & PCA: 
+
+KL divergence for Class 10 = 4.2676318544504594 
+
+KL divergence for Class 6 = 4.9765230423560105 
+
+KL divergence for Class 4 = 7.31644352147926 
+
+KL divergence for Class 9 = 5.441653107950981 
+
+KL divergence for Class 1 = 5.20095419532062 
+
+KL divergence for Class 2 = 3.2620842776571655 
+
+KL divergence for Class 8 = 7.05643122279978 
+
+KL divergence for Class 3 = 8.275756901643437 
+
+KL divergence for Class 5 = 7.758501779064016 
+
+KL divergence for Class 7 = 5.272900155296784 
+
+Note: We do not apply PCA in classification w/o SA 
+
+Source: dslr Target: webcam
+KL Divergence b/w orig S and T data = 380.6365832314825 
+
+Class wise KL Divergence b/w orig S & T data before SA: 
+
+KL divergence for Class 10 = 55.633443893802706 
+
+KL divergence for Class 6 = 207.5213011393445 
+
+KL divergence for Class 4 = 266.73892701924564 
+
+KL divergence for Class 9 = 193.20669804835504 
+
+KL divergence for Class 1 = 182.0146896441754 
+
+KL divergence for Class 2 = 102.37178352253441 
+
+KL divergence for Class 8 = 163.7680295085986 
+
+KL divergence for Class 3 = 447.89543890040295 
+
+KL divergence for Class 5 = 248.04411891499603 
+
+KL divergence for Class 7 = 393.15612981585446 
+
+Class wise KL Divergence b/w orig S & T data after SA & PCA: 
+
+KL divergence for Class 10 = 7.02225854635089 
+
+KL divergence for Class 6 = 10.184903553036513 
+
+KL divergence for Class 4 = 9.063185609801726 
+
+KL divergence for Class 9 = 7.320051093679082 
+
+KL divergence for Class 1 = 7.52611170612157 
+
+KL divergence for Class 2 = 4.707701638750434 
+
+KL divergence for Class 8 = 6.298066666555066 
+
+KL divergence for Class 3 = 11.692409224343747 
+
+KL divergence for Class 5 = 10.48887988491434 
+
+KL divergence for Class 7 = 12.144786606110053 
+
+Note: We do not apply PCA in classification w/o SA 
+
+                                                         subspace                                   without subspace
+(webcam, dslr)  [0.9936305732484076, 0.0, 0.9936305732484076, ...  [0.9745222929936306, 0.0, 0.9745222929936306, ...
+(dslr, webcam)  [0.9279749478079331, 1.1102230246251565e-16, 0...  [0.8162839248434238, 0.0, 0.8162839248434238, ...
+Accuracy for (webcam,dslr) 
+ with SA = [0.9936305732484076, 0.0, 0.9936305732484076, 0.9936305732484076] 
+ w/o SA = [0.9745222929936306, 0.0, 0.9745222929936306, 0.9745222929936306] 
+
+Accuracy for (dslr,webcam) 
+ with SA = [0.9279749478079331, 1.1102230246251565e-16, 0.9279749478079332, 0.9279749478079332] 
+ w/o SA = [0.8162839248434238, 0.0, 0.8162839248434238, 0.8162839248434238] 
+

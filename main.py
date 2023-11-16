@@ -73,11 +73,21 @@ if __name__ == "__main__":
         df_amazon = pd.DataFrame(np.hstack((amazon['fts'], amazon['labels'].T)))
     
     n = len(df_webcam.keys()) - 1
-    with open(('outputs/{}.txt').format(args.dataset), 'w') as f:
+    if args.plot == True:
+        filename = ('outputs/{}_pca2.txt').format(args.dataset)
+    else:
+        filename = ('outputs/{}_pca13.txt').format(args.dataset)
+
+    with open(filename, 'w') as f:
 
         print('Dataset: ',args.dataset, file = f)
         print('Number of Features: ', n, file = f)
         print(('Fraction of source data sampled randomly: {}; Plot Flag = {}; Classwise KL flag: {}').format(args.frac, args.plot, args.class_kl), file = f)
+        
+        if args.plot == True:
+            print('PCA: 2', file=f)
+        else:
+            print('PCA: 13', file=f)
 
         mean_cov(df_webcam.iloc[:,:n])
         # scatter(df_webcam.iloc[:,:n], df_webcam.iloc[:,-1])
