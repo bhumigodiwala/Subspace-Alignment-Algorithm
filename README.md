@@ -12,8 +12,20 @@ The key observations suggest:
 3. Applying Subspace Alignment and PCA drastically reduces the KL divergence values between the source and the target datasets.
 4. There is reduction in KL divergence for data specific to every class
 
+Requirements to run the file:
+The virtual env is stored in venv.yml file. To save the conda virtual environment to yml file use the following command
+
+```
+conda activate {$ myenv}
+conda env export > {$ environment}.yml
+```
+
 To run and observe the results:
 
 ```
 python3 evaluation.py
 ```
+
+References:
+1. [Subspace Alignment For Domain Adaptation](https://arxiv.org/abs/1409.5241) - Basura Fernando, Amaury Habrard, Marc Sebban, Tinne Tuytelaars
+2. [Kullback-Leibler Divergence Estimation of Continuous Distributions](https://www.tsc.uc3m.es/%7Efernando/bare_conf3.pdf) - Fernando Perez-Cruz
