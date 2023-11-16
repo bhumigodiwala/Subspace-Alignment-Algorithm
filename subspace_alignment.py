@@ -19,7 +19,7 @@ def scatter_plot(df_source, x, y):
             plt.legend([l for l in range(1,11)])
         
 class subspace:
-    def __init__(self,dataset,S,T,d,index,class_kl, plot = False):
+    def __init__(self,dataset,S,T,d,index,class_kl, file, plot = False):
         self.dataset = dataset
         self.S = S
         self.T = T
@@ -27,6 +27,7 @@ class subspace:
         self.class_kl = class_kl
         self.plot = plot
         self.index = index
+        self.file = file
         
     def pca(self,x, n_components):
         cov = np.cov(x , rowvar = False)
@@ -43,11 +44,11 @@ class subspace:
                 S_row_ix = np.where(y_S == class_value)
                 T_row_ix = np.where(y_T == class_value)                
                 class_kl = KLdivergence(x_S[S_row_ix], x_T[T_row_ix])
-                print(('KL divergence for Class {} = {} \n').format(class_value, class_kl))
+                print(('KL divergence for Class {} = {} \n').format(class_value, class_kl), self.file)
         
     def fit_predict(self,plot):
 #       KL Divergence b/w orig S and T data
-        print(('KL Divergence b/w orig S and T data = {} \n').format(KLdivergence(self.S, self.T)))
+        print(('KL Divergence b/w orig S and T data = {} \n').format(KLdivergence(self.S, self.T)), self.file)
         
         #normalising the data
         scale = StandardScaler()
@@ -77,17 +78,17 @@ class subspace:
         test_s = np.dot(x_S,xs)
 
         if self.class_kl == True:
-            print('Class wise KL Divergence b/w orig S & T data before SA: \n')
+            print('Class wise KL Divergence b/w orig S & T data before SA: \n', self.file)
             self.class_wise_kl(self.S, x_S, x_T, y_S, y_T)
 
-            print('Class wise KL Divergence b/w orig S & T data after SA & PCA: \n')
+            print('Class wise KL Divergence b/w orig S & T data after SA & PCA: \n', self.file)
             self.class_wise_kl(self.S, sa, st, y_S, y_T)
         else:
             # KL Divergence b/w Original Source and Target data SA after PCA
-            print(('KL Divergence b/w Original Source and target data (SA) after PCA = {} \n').format(KLdivergence(test_s, st)))
+            print(('KL Divergence b/w Original Source and target data (SA) after PCA = {} \n').format(KLdivergence(test_s, st)), self.file)
             
             # KL Divergence b/w Source Aligned data and target data SA after PCA
-            print(('KL Divergence b/w Source Aligned data (SA) and target data after PCA = {} \n').format(KLdivergence(sa, st)))
+            print(('KL Divergence b/w Source Aligned data (SA) and target data after PCA = {} \n').format(KLdivergence(sa, st)), self.file)
             
         if self.plot == True:
             # create scatter plot for Source dataset after PCA before SA
@@ -147,7 +148,7 @@ class subspace:
         
         return [acc_mean, acc_std, acc_min, acc_max]
 
-def knn(dataset,S,T,index,seed, plot = False):
+def knn(dataset,S,T,index,seed,file, plot = False):
 #         KL Divergence b/w Source and Target data
 #     print(('KL Divergence b/w Source and Target data (w/o SA) = {}').format(KLdivergence(S, T)))
     dataset = dataset
@@ -210,7 +211,7 @@ def knn(dataset,S,T,index,seed, plot = False):
         # plt.show()
     
     else:
-        print('Note: We do not apply PCA in classification w/o SA \n')
+        print('Note: We do not apply PCA in classification w/o SA \n', file)
         knn = KNeighborsClassifier(4)
         accuracy = []
         for j in range(5):

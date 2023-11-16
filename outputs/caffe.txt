@@ -1,4 +1,6 @@
 Dataset:  caffe
+Number of Features:  4096
+Fraction of source data sampled randomly: 0.5; Plot Flag = False; Classwise KL flag: False
 Mean Vector for Source data: 
  0       0.032651
 1       0.289166
@@ -44,42 +46,45 @@ Length: 4096, dtype: float64
 Random Seed:  20 
 
 Source: webcam Target: dslr
-KL Divergence b/w orig S and T data = 1017.9313685854466 
-
-KL Divergence b/w Original Source and target data (SA) after PCA = 1.8811548533147944 
-
-KL Divergence b/w Source Aligned data (SA) and target data after PCA = 1.5001612541635765 
-
-/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-  ax.scatter(
-/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-  ax.scatter(
-/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-  ax.scatter(
-/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-  ax.scatter(
 Source: dslr Target: webcam
-KL Divergence b/w orig S and T data = 1972.2613269136448 
-
-KL Divergence b/w Original Source and target data (SA) after PCA = 2.80700464379322 
-
-KL Divergence b/w Source Aligned data (SA) and target data after PCA = 1.3265741348890767 
-
-/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-  ax.scatter(
-/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-  ax.scatter(
-/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-  ax.scatter(
-/Users/bhumigodiwala/anaconda3/envs/tf/lib/python3.11/site-packages/mlxtend/plotting/decision_regions.py:346: UserWarning: You passed a edgecolor/edgecolors ('black') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-  ax.scatter(
                                                          subspace                                   without subspace
-(webcam, dslr)  [0.36942675159235666, 0.0, 0.36942675159235666...  [0.20382165605095542, 0.0, 0.20382165605095542...
-(dslr, webcam)  [0.29123173277661796, 0.0, 0.29123173277661796...  [0.20041753653444677, 0.0, 0.20041753653444677...
+(webcam, dslr)  [0.9745222929936306, 0.0, 0.9745222929936306, ...  [0.9044585987261147, 0.0, 0.9044585987261147, ...
+(dslr, webcam)  [0.8590814196242171, 0.0, 0.8590814196242171, ...  [0.6189979123173278, 0.0, 0.6189979123173278, ...
 Accuracy for (webcam,dslr) 
- with SA = [0.36942675159235666, 0.0, 0.36942675159235666, 0.36942675159235666] 
- w/o SA = [0.20382165605095542, 0.0, 0.20382165605095542, 0.20382165605095542] 
+ with SA = [0.9745222929936306, 0.0, 0.9745222929936306, 0.9745222929936306] 
+ w/o SA = [0.9044585987261147, 0.0, 0.9044585987261147, 0.9044585987261147] 
 
 Accuracy for (dslr,webcam) 
- with SA = [0.29123173277661796, 0.0, 0.29123173277661796, 0.29123173277661796] 
- w/o SA = [0.20041753653444677, 0.0, 0.20041753653444677, 0.20041753653444677] 
+ with SA = [0.8590814196242171, 0.0, 0.8590814196242171, 0.8590814196242171] 
+ w/o SA = [0.6189979123173278, 0.0, 0.6189979123173278, 0.6189979123173278] 
+
+Random Seed:  40 
+
+Source: webcam Target: dslr
+Source: dslr Target: webcam
+                                                         subspace                                   without subspace
+(webcam, dslr)  [0.9808917197452229, 0.0, 0.9808917197452229, ...  [0.9808917197452229, 0.0, 0.9808917197452229, ...
+(dslr, webcam)  [0.8945720250521919, 1.1102230246251565e-16, 0...  [0.7369519832985386, 0.0, 0.7369519832985386, ...
+Accuracy for (webcam,dslr) 
+ with SA = [0.9808917197452229, 0.0, 0.9808917197452229, 0.9808917197452229] 
+ w/o SA = [0.9808917197452229, 0.0, 0.9808917197452229, 0.9808917197452229] 
+
+Accuracy for (dslr,webcam) 
+ with SA = [0.8945720250521919, 1.1102230246251565e-16, 0.894572025052192, 0.894572025052192] 
+ w/o SA = [0.7369519832985386, 0.0, 0.7369519832985386, 0.7369519832985386] 
+
+Random Seed:  42 
+
+Source: webcam Target: dslr
+Source: dslr Target: webcam
+                                                         subspace                                   without subspace
+(webcam, dslr)  [0.961783439490446, 1.1102230246251565e-16, 0....  [0.89171974522293, 0.0, 0.89171974522293, 0.89...
+(dslr, webcam)  [0.8830897703549061, 0.0, 0.8830897703549061, ...  [0.6784968684759917, 0.0, 0.6784968684759917, ...
+Accuracy for (webcam,dslr) 
+ with SA = [0.961783439490446, 1.1102230246251565e-16, 0.9617834394904459, 0.9617834394904459] 
+ w/o SA = [0.89171974522293, 0.0, 0.89171974522293, 0.89171974522293] 
+
+Accuracy for (dslr,webcam) 
+ with SA = [0.8830897703549061, 0.0, 0.8830897703549061, 0.8830897703549061] 
+ w/o SA = [0.6784968684759917, 0.0, 0.6784968684759917, 0.6784968684759917] 
+
