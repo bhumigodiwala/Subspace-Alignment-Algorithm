@@ -16,7 +16,7 @@ def scatter_plot(df_source, x, y):
             row_ix = np.where(y == class_value)
             # create scatter of these samples
             plt.scatter(x[row_ix, 0], x[row_ix, 1])
-            plt.legend([l for l in range(1,11)])
+            plt.legend(labels)
         
 class subspace:
     def __init__(self,dataset,S,T,d,index,class_kl, file, plot = False):
@@ -94,19 +94,19 @@ class subspace:
             # create scatter plot for Source dataset after PCA before SA
             scatter_plot(self.S, sa_pca, y_S)
             plt.title('Source dataset after PCA before SA')
-            plt.savefig(('output_plots/{}_{}/sa/S_data_(PCA + SA).png').format(self.index[0], self.index[1]))
+            plt.savefig(('output_plots/{}/{}_{}/sa/S_data_(PCA + SA).png').format(self.dataset,self.index[0], self.index[1]))
             plt.close()
 
             # create scatter plot for Target dataset after PCA
             scatter_plot(self.S, st, y_T)
             plt.title('Target dataset after PCA')
-            plt.savefig(('output_plots/{}_{}/sa/T_data_(PCA).png').format(self.index[0], self.index[1]))
+            plt.savefig(('output_plots/{}/{}_{}/sa/T_data_(PCA).png').format(self.dataset,self.index[0], self.index[1]))
             plt.close()
 
             # create scatter plot for Subspace aligned dataset
             scatter_plot(self.S, sa, y_S)
             plt.title('Subspace Aligned Data')
-            plt.savefig(('output_plots/{}_{}/sa/SA_aligned_data.png').format(self.index[0], self.index[1]))
+            plt.savefig(('output_plots/{}/{}_{}/sa/SA_aligned_data.png').format(self.dataset,self.index[0], self.index[1]))
             plt.close()
         
         #knn classifier
@@ -126,12 +126,12 @@ class subspace:
 
             fig = plot_decision_regions(sa, np.asarray(y_S).astype(np.int_),knn,legend=2)
             plt.title('Source data with Source ground truth labels WITH SUBSPACE')
-            plt.savefig(('output_plots/{}_{}/sa/S_dec_reg_sa.png').format(self.index[0], self.index[1]))
+            plt.savefig(('output_plots/{}/{}_{}/sa/S_dec_reg_sa.png').format(self.dataset, self.index[0], self.index[1]))
             plt.close()
 
             fig = plot_decision_regions(st, np.asarray(y_T).astype(np.int_),knn,legend=2)
             plt.title('Target data with Target ground truth labels WITH SUBSPACE')
-            plt.savefig(('output_plots/{}_{}/sa/T_dec_reg_sa.png').format(self.index[0], self.index[1]))
+            plt.savefig(('output_plots/{}/{}_{}/sa/T_dec_reg_sa.png').format(self.dataset,self.index[0], self.index[1]))
             plt.close()
 
             ax.set_ylabel('y label')
@@ -173,13 +173,13 @@ def knn(dataset,S,T,index,seed,file, plot = False):
         
         scatter_plot(S, x_S_pca, y_S)
         plt.title('Source dataset after PCA in SL')
-        plt.savefig(('output_plots/{}_{}/w_o_sa/S_data_(PCA+Classifier).png').format(index[0], index[1]))
+        plt.savefig(('output_plots/{}/{}_{}/w_o_sa/S_data_(PCA+Classifier).png').format(dataset, index[0], index[1]))
         plt.close()
 
         # create scatter plot for Target dataset after PCA
         scatter_plot(T, x_T_pca, y_T)
         plt.title('Target dataset after PCA in SL')
-        plt.savefig(('output_plots/{}_{}/w_o_sa/T_data_(PCA+Classifier).png').format(index[0], index[1]))
+        plt.savefig(('output_plots/{}/{}_{}/w_o_sa/T_data_(PCA+Classifier).png').format(dataset,index[0], index[1]))
         plt.close()
     
         knn = KNeighborsClassifier(1)
@@ -196,12 +196,12 @@ def knn(dataset,S,T,index,seed,file, plot = False):
 
         fig = plot_decision_regions(x_S_pca, np.asarray(y_S).astype(np.int_),knn,legend=2)
         plt.title('Source data with Source ground truth labels WITHOUT SUBSPACE')
-        plt.savefig(('output_plots/{}_{}/w_o_sa/S_dec_reg.png').format(index[0], index[1]))
+        plt.savefig(('output_plots/{}/{}_{}/w_o_sa/S_dec_reg.png').format(dataset,index[0], index[1]))
         plt.close()
 
         fig = plot_decision_regions(x_T_pca, np.asarray(y_T).astype(np.int_),knn,legend=2)
         plt.title('Target data with Target ground truth labels WITHOUT SUBSPACE')
-        plt.savefig(('output_plots/{}_{}/w_o_sa/T_dec_reg.png').format(index[0], index[1]))
+        plt.savefig(('output_plots/{}/{}_{}/w_o_sa/T_dec_reg.png').format(dataset,index[0], index[1]))
         plt.close()
 
         ax.set_ylabel('y label')

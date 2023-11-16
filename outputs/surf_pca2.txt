@@ -1,0 +1,127 @@
+Dataset:  surf
+Number of Features:  800
+Fraction of source data sampled randomly: 0.5; Plot Flag = True; Classwise KL flag: False
+PCA: 2
+Mean Vector for Source data: 
+ 0      0.183051
+1      0.047458
+2      0.115254
+3      0.291525
+4      0.230508
+         ...   
+795    0.115254
+796    0.457627
+797    0.094915
+798    0.105085
+799    0.081356
+Length: 800, dtype: float64 
+
+Mean Vector for Source data: 
+ 0      0.171975
+1      0.031847
+2      0.121019
+3      0.280255
+4      0.171975
+         ...   
+795    0.095541
+796    0.433121
+797    0.063694
+798    0.165605
+799    0.057325
+Length: 800, dtype: float64 
+
+Mean Vector for Source data: 
+ 0      0.120042
+1      0.120042
+2      0.153445
+3      0.303758
+4      0.188935
+         ...   
+795    0.167015
+796    0.126305
+797    0.155532
+798    0.255741
+799    0.060543
+Length: 800, dtype: float64 
+
+Random Seed:  20 
+
+Source: webcam Target: dslr
+KL Divergence b/w orig S and T data = 45.433162051665306 
+
+KL Divergence b/w Original Source and target data (SA) after PCA = 0.4340071900961959 
+
+KL Divergence b/w Source Aligned data (SA) and target data after PCA = 2.8229985558355573 
+
+Source: dslr Target: webcam
+KL Divergence b/w orig S and T data = 41.15816106027977 
+
+KL Divergence b/w Original Source and target data (SA) after PCA = 1.16010864126393 
+
+KL Divergence b/w Source Aligned data (SA) and target data after PCA = 1.533806153477816 
+
+                                                         subspace                                   without subspace
+(webcam, dslr)  [0.2802547770700637, 0.0, 0.2802547770700637, ...  [0.17197452229299362, 0.0, 0.17197452229299362...
+(dslr, webcam)  [0.18162839248434237, 0.0, 0.18162839248434237...  [0.13465553235908143, 0.0, 0.13465553235908143...
+Accuracy for (webcam,dslr) 
+ with SA = [0.2802547770700637, 0.0, 0.2802547770700637, 0.2802547770700637] 
+ w/o SA = [0.17197452229299362, 0.0, 0.17197452229299362, 0.17197452229299362] 
+
+Accuracy for (dslr,webcam) 
+ with SA = [0.18162839248434237, 0.0, 0.18162839248434237, 0.18162839248434237] 
+ w/o SA = [0.13465553235908143, 0.0, 0.13465553235908143, 0.13465553235908143] 
+
+Random Seed:  40 
+
+Source: webcam Target: dslr
+KL Divergence b/w orig S and T data = 41.31402973995231 
+
+KL Divergence b/w Original Source and target data (SA) after PCA = 0.3640562525316341 
+
+KL Divergence b/w Source Aligned data (SA) and target data after PCA = 3.135228173284493 
+
+Source: dslr Target: webcam
+KL Divergence b/w orig S and T data = 30.933650987554774 
+
+KL Divergence b/w Original Source and target data (SA) after PCA = 0.7080503123127586 
+
+KL Divergence b/w Source Aligned data (SA) and target data after PCA = 2.65885255709707 
+
+                                                         subspace                                   without subspace
+(webcam, dslr)  [0.2929936305732484, 0.0, 0.2929936305732484, ...  [0.15286624203821655, 0.0, 0.15286624203821655...
+(dslr, webcam)  [0.13883089770354906, 0.0, 0.13883089770354906...  [0.11169102296450939, 0.0, 0.11169102296450939...
+Accuracy for (webcam,dslr) 
+ with SA = [0.2929936305732484, 0.0, 0.2929936305732484, 0.2929936305732484] 
+ w/o SA = [0.15286624203821655, 0.0, 0.15286624203821655, 0.15286624203821655] 
+
+Accuracy for (dslr,webcam) 
+ with SA = [0.13883089770354906, 0.0, 0.13883089770354906, 0.13883089770354906] 
+ w/o SA = [0.11169102296450939, 0.0, 0.11169102296450939, 0.11169102296450939] 
+
+Random Seed:  42 
+
+Source: webcam Target: dslr
+KL Divergence b/w orig S and T data = 31.719437847594325 
+
+KL Divergence b/w Original Source and target data (SA) after PCA = 1.0213627499556175 
+
+KL Divergence b/w Source Aligned data (SA) and target data after PCA = 2.6139044899662727 
+
+Source: dslr Target: webcam
+KL Divergence b/w orig S and T data = 17.674973762362843 
+
+KL Divergence b/w Original Source and target data (SA) after PCA = 1.448606449488803 
+
+KL Divergence b/w Source Aligned data (SA) and target data after PCA = 1.2197771716245727 
+
+                                                         subspace                                   without subspace
+(webcam, dslr)  [0.2484076433121019, 0.0, 0.2484076433121019, ...  [0.21019108280254778, 0.0, 0.21019108280254778...
+(dslr, webcam)  [0.23068893528183715, 0.0, 0.23068893528183715...  [0.1524008350730689, 0.0, 0.1524008350730689, ...
+Accuracy for (webcam,dslr) 
+ with SA = [0.2484076433121019, 0.0, 0.2484076433121019, 0.2484076433121019] 
+ w/o SA = [0.21019108280254778, 0.0, 0.21019108280254778, 0.21019108280254778] 
+
+Accuracy for (dslr,webcam) 
+ with SA = [0.23068893528183715, 0.0, 0.23068893528183715, 0.23068893528183715] 
+ w/o SA = [0.1524008350730689, 0.0, 0.1524008350730689, 0.1524008350730689] 
+
